@@ -1,0 +1,40 @@
+﻿<Window x:Class="Pinterest_V2.PinDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:local="clr-namespace:Pinterest_V2"
+        mc:Ignorable="d"
+        Title="PinDetails" Height="600" Width="700" WindowStyle="None" WindowStartupLocation="CenterScreen">
+     <Grid Loaded="loadPage">
+          <StackPanel Width="693" Height="500" VerticalAlignment="Center" HorizontalAlignment="Center" Opacity="0.7" Background="#FFEDE4E3" Margin="0,47,0.333,46.333"/>
+          <StackPanel Width="693" Height="537" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0.333,46.333" >
+
+               <Image Height="132" VerticalAlignment="Top" Width="346" Source="images/PinDetails Title.png" Stretch="Fill" HorizontalAlignment="Center" />
+               <StackPanel Height="402" Width="630" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="32,0,31.333,0" >
+
+                    <StackPanel Width="220" Height="250" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,20,0,0"  >
+                         <Border Height="200" Width="200" BorderBrush="#FF6B6B6B" BorderThickness="2" VerticalAlignment="Center" Margin="0,20,0,0" HorizontalAlignment="Center">
+                              <Image x:Name="Pin_pic" Stretch="Fill"  />
+                         </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="300" Height="60" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="300,-380,0,0" >
+                         <materialDesign:PackIcon Kind="Pin"  HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="5,20,5,7"  Foreground="#FFBC4242"/>
+                         <TextBox materialDesign:HintAssist.Hint="Pin Name"   x:Name="PinName_txt" HorizontalAlignment="Left" Height="40" Margin="5,0,0,0" VerticalAlignment="Center" Width="250" AutomationProperties.Name="name_txt" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="JF Flat" FontSize="20" Padding="0,-5,0,0" IsEnabled="False"/>
+                    </StackPanel>
+
+                    <StackPanel  Orientation="Horizontal" Width="300" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,-125,0,0">
+                         <materialDesign:PackIcon Kind="Paper"  HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="5,0,5,7"  Foreground="#FFBC4242"/>
+                         <TextBox materialDesign:HintAssist.Hint="Description" x:Name="Description_txt" HorizontalAlignment="Left" Height="90" Margin="5,0,0,10" VerticalAlignment="Center" Width="250" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="JF Flat" FontSize="20" Padding="0,-14,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" AcceptsReturn="True" IsEnabled="False" />
+                    </StackPanel>
+
+                    <StackPanel  Orientation="Horizontal" Width="240" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,-20,0,0">
+                         <materialDesign:PackIcon Kind="Selection"  HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="5,20,5,7"  Foreground="#FFBC4242"/>
+                         <TextBox materialDesign:HintAssist.Hint="Select Board"   x:Name="board_combx" HorizontalAlignment="Left" Height="40" Margin="5,0,0,0" VerticalAlignment="Center" Width="200" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="JF Flat" FontSize="20" Padding="0,-5,0,0" IsEnabled="False"/>
+                    </StackPanel>
+                    <Button x:Name="Back_btn" Content="Back" HorizontalAlignment="Right" Height="44" Margin="0,30,40,0" VerticalAlignment="Bottom" Width="72" Click="Back_btn_Click" FontFamily="JF Flat" FontSize="18" FontWeight="Bold" Foreground="White" Background="#FFBC4242"/>
+               </StackPanel>
+          </StackPanel>
+     </Grid>
+</Window>

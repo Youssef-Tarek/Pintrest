@@ -1,0 +1,24 @@
+﻿<Window x:Class="Pinterest_V2.ListOf_Follow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pinterest_V2"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        mc:Ignorable="d"  Height="400" Width="350" Title="Follower"  WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Loaded="Grid_Loaded">
+        <Button x:Name="CloseButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="45" BorderBrush="{x:Null}" Click="Close_icon" Background="{x:Null}" Padding="0" Margin="10">
+            <materialDesign:PackIcon Kind="ArrowRightBold" Foreground="Gray" Height="40" Width="40"/>
+        </Button>
+          <ListBox  x:Name ="List_of_Follower" SelectionChanged="List_of_Follower_SelectionChanged" ItemsSource="{Binding}" Margin="10,55,10,0" >
+               <ListBox.ItemTemplate>
+                    <DataTemplate>
+                         <StackPanel Height="50" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin ="0" Width="290">
+                              <Ellipse Fill="{Binding Image_user}"  StrokeThickness="3"  Stroke="Gray" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,20,20" RenderTransformOrigin="-.688,-0.779"/>
+                              <Label   Content="{Binding Name_user}" Height="50" Width="220" FontFamily="JF Flat" FontSize="18"  Margin="65,-70,60,-60" Padding="4"  HorizontalAlignment="left" VerticalAlignment="Top" FontWeight="Bold" VerticalContentAlignment="Center"   />
+                         </StackPanel>
+                    </DataTemplate>
+               </ListBox.ItemTemplate>
+          </ListBox>
+     </Grid>
+</Window>

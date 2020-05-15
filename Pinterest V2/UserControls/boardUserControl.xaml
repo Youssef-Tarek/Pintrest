@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Pinterest_V2.UserControls.boardUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             mc:Ignorable="d" Height="200" Width="200" MouseEnter="UserControl_MouseEnter" MouseLeave="UserControl_MouseLeave">
+     <Grid>
+          <Button x:Name="boardButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="200" Opacity="2" Foreground="Black" FontSize="25" FontWeight="Bold" FontFamily="JF Flat" Click="boardButton_Click" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left">
+               <Button.Background>
+                    <ImageBrush/>
+               </Button.Background>
+          </Button>
+
+          <Button x:Name="EditMyBoard_btn" Width="40" Height="39" Visibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Left" Padding="0,0,0,0" BorderBrush="{x:Null}" Background="{x:Null}" Click="EditMyBoard_Click" Margin="0,10,0,0" RenderTransformOrigin="0.494,1.591" >
+               <materialDesign:PackIcon Name="EditMyBoard_Icon" Kind="Edit" Width="35" Height="40" Foreground="Gray" VerticalAlignment="Top" HorizontalAlignment="Center" RenderTransformOrigin="0.508,1.193" />
+          </Button>
+
+          <Button x:Name="DeleteMyBoard_btn" Width="40" Height="43" Visibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Left" Padding="0,0,0,0" BorderBrush="{x:Null}" Background="{x:Null}" Click="DeleteMyBoard_btn_Click" Margin="0,54,0,0" RenderTransformOrigin="0.494,1.591" >
+               <materialDesign:PackIcon Name="DeleteMyBoard_btn_Icon" Kind="Delete" Width="35" Height="41" Foreground="Gray" VerticalAlignment="Top" HorizontalAlignment="Center" RenderTransformOrigin="0.508,1.193"/>
+          </Button>
+     </Grid>
+</UserControl>

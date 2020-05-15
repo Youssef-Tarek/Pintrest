@@ -1,0 +1,12 @@
+﻿<Window x:Class="Pinterest_V2.HelpForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Help" Height="600" Width="800" Background="White" WindowStartupLocation="CenterScreen">
+    <Grid Loaded="Grid_Loaded">
+        <Image Height="80" VerticalAlignment="Top" Width="122" Source="images/help.png" Stretch="Fill" HorizontalAlignment="Center" Margin="0,0,670,0" RenderTransformOrigin="-0.5,1.188" />
+
+        <ScrollViewer Margin="10,85,10,0">
+            <StackPanel x:Name="helpPanel" Height="1646" Width="792" CanVerticallyScroll="True"/>
+        </ScrollViewer>
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Pinterest_V2.UserControls.NotificationsUserControl"
+                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Pinterest_V2.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+              mc:Ignorable="d" 
+             d:DesignHeight="50" Width="306.014">
+    <Grid Background="White">
+
+        <ListView HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <ListViewItem Height="50" Width="303">
+                <StackPanel Height="40" Width="290" VerticalAlignment="Center">
+                    <materialDesign:PackIcon x:Name="icon" Kind="PersonPlus" Width="35" Height="35" Foreground="Gray" VerticalAlignment="Bottom" ClipToBounds="True"/>
+                    <Button x:Name="Notification" BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Content="User Name1" HorizontalAlignment="Left"  Margin="45,-32,0,-32" FontSize="15" VerticalAlignment="Top" FontFamily="JF Flat" Width="298" RenderTransformOrigin="0.5,0.5" Click="Notification_Click"/>
+                </StackPanel> 
+            </ListViewItem>
+        </ListView>
+    </Grid>
+</UserControl>
